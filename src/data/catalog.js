@@ -1,10 +1,10 @@
 export const CATEGORIES = [
-  { id: 'all', bn: 'সব পণ্য', en: 'All Products' },
-  { id: 'rice-dal', bn: 'চাল ও ডাল', en: 'Rice & Dal' },
-  { id: 'oil-spice', bn: 'তেল ও মসলা', en: 'Oil & Spices' },
-  { id: 'fresh-veg', bn: 'তাজা বাজার ও ডিম', en: 'Fresh Market & Eggs' },
-  { id: 'dairy-breakfast', bn: 'দুগ্ধ ও নাস্তা', en: 'Dairy & Breakfast' },
-  { id: 'homecare', bn: 'ঘর পরিষ্কার', en: 'Home Care' },
+  { id: 'all', bn: 'সব পণ্য', en: 'All Products', accent: 'violet' },
+  { id: 'rice-dal', bn: 'চাল ও ডাল', en: 'Rice & Dal', accent: 'turmeric' },
+  { id: 'oil-spice', bn: 'তেল ও মসলা', en: 'Oil & Spices', accent: 'mango' },
+  { id: 'fresh-veg', bn: 'তাজা বাজার ও ডিম', en: 'Fresh Market & Eggs', accent: 'teal' },
+  { id: 'dairy-breakfast', bn: 'দুগ্ধ ও নাস্তা', en: 'Dairy & Breakfast', accent: 'sky' },
+  { id: 'homecare', bn: 'ঘর পরিষ্কার', en: 'Home Care', accent: 'berry' },
 ];
 
 export const NEEDS = [
@@ -15,6 +15,7 @@ export const NEEDS = [
     en: 'Monthly Groceries',
     bnSub: 'চাল, ডাল, তেল ও মসলা',
     enSub: 'Rice, dal, oil & spices',
+    accent: 'violet',
   },
   {
     id: 'breakfast',
@@ -23,6 +24,7 @@ export const NEEDS = [
     en: 'Breakfast Basics',
     bnSub: 'ডিম, দুধ, চা ও চিনি',
     enSub: 'Eggs, milk, tea & sugar',
+    accent: 'turmeric',
   },
   {
     id: 'fresh',
@@ -31,6 +33,7 @@ export const NEEDS = [
     en: 'Fresh Today',
     bnSub: 'তাজা সবজি ও ফার্মের ডিম',
     enSub: 'Fresh vegetables & farm eggs',
+    accent: 'teal',
   },
   {
     id: 'homecare',
@@ -39,6 +42,7 @@ export const NEEDS = [
     en: 'Home Care',
     bnSub: 'টিস্যু ও গৃহস্থালি পণ্য',
     enSub: 'Tissues & household goods',
+    accent: 'berry',
   },
 ];
 

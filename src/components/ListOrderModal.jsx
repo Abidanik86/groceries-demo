@@ -81,7 +81,7 @@ export default function ListOrderModal({ copy, lang, open, onClose, onSent }) {
       <div
         onClick={onClose}
         aria-hidden="true"
-        className="absolute inset-0 bg-[#0d3a1d]/50 backdrop-blur-[2px]"
+        className="absolute inset-0 bg-[#2A0B4A]/60 backdrop-blur-[2px]"
       />
       <div
         role="dialog"

@@ -16,8 +16,8 @@ export default function RepeatBanner({ copy, lang, onAddAll, onDismiss }) {
       <div className="mx-auto max-w-7xl px-4 py-3 sm:px-6">
         <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
           <div className="flex min-w-0 flex-1 items-start gap-3">
-            <span className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-[#ECFDF5]">
-              <RefreshCw className="h-4 w-4 text-action" strokeWidth={2.6} />
+            <span className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-violet-100">
+              <RefreshCw className="h-4 w-4 text-violet-700" strokeWidth={2.6} />
             </span>
             <div className="min-w-0">
               <p lang="bn" className="bn-tight text-[14px] font-bold text-brand">
@@ -41,7 +41,7 @@ export default function RepeatBanner({ copy, lang, onAddAll, onDismiss }) {
             <button
               type="button"
               onClick={onAddAll}
-              className="inline-flex min-h-[42px] items-center gap-2 rounded-xl bg-action px-4 text-[13px] font-bold leading-tight text-white transition-colors hover:bg-action-dark active:scale-[0.985]"
+              className="inline-flex min-h-[42px] items-center gap-2 rounded-xl bg-gradient-to-r from-[#F97316] to-[#FB923C] px-4 text-[13px] font-bold leading-tight text-white shadow-sm transition-all hover:from-[#EA580C] hover:to-[#F97316] active:scale-[0.985]"
             >
               <ShoppingCart className="h-4 w-4" strokeWidth={2.4} />
               {copy.repeat.cta}

@@ -9,18 +9,18 @@ export function FloatingCartPill({ copy, lang, totals, onOpenCart }) {
       <button
         type="button"
         onClick={onOpenCart}
-        className="pointer-events-auto flex min-h-[50px] w-full items-center gap-2 rounded-2xl bg-brand px-4 text-white shadow-lift transition-transform active:scale-[0.985]"
+        className="pointer-events-auto flex min-h-[50px] w-full items-center gap-2 rounded-2xl bg-gradient-to-r from-[#F97316] to-[#FB923C] px-4 text-white shadow-lift transition-transform active:scale-[0.985]"
       >
         <span className="relative flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-white/15">
           <ShoppingCart className="h-4 w-4" strokeWidth={2.4} />
-          <span className="num absolute -right-1.5 -top-1.5 flex h-4 min-w-4 items-center justify-center rounded-full bg-action px-1 text-[10px] font-bold leading-none">
+          <span className="num absolute -right-1.5 -top-1.5 flex h-4 min-w-4 items-center justify-center rounded-full bg-violet-700 px-1 text-[10px] font-bold leading-none">
             {totals.itemCount}
           </span>
         </span>
         <span className="num text-[13px] font-semibold">
           {totals.itemCount} {copy.cart.itemCount} • {taka(totals.subtotal)}
         </span>
-        <span className="ml-auto inline-flex items-center gap-1 text-[13px] font-bold text-[#9CD6A8]">
+        <span className="ml-auto inline-flex items-center gap-1 text-[13px] font-bold text-white">
           {copy.floatingCart.view}
           <span aria-hidden="true">→</span>
         </span>

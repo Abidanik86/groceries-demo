@@ -28,7 +28,7 @@ export default function ProductGrid({
         <button
           type="button"
           onClick={onClearFilters}
-          className="mt-1 rounded-xl border border-line bg-surface px-4 py-2.5 text-[13px] font-semibold text-brand transition-colors hover:border-brand"
+          className="mt-1 rounded-xl border border-line bg-surface px-4 py-2.5 text-[13px] font-semibold text-violet-700 transition-colors hover:border-violet-400 hover:bg-violet-50"
         >
           {copy.filters.clear}
         </button>
@@ -37,7 +37,7 @@ export default function ProductGrid({
   }
 
   return (
-    <div className="mx-auto max-w-7xl px-4 pb-10 pt-5 sm:px-6 sm:pt-6">
+    <div className="mx-auto max-w-7xl px-4 pb-10 pt-4 sm:px-6">
       <div className="grid grid-cols-2 gap-3 sm:gap-5 md:grid-cols-3 lg:grid-cols-4">
         {products.map((product) => (
           <ProductCard

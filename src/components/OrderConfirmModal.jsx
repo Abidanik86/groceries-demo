@@ -30,7 +30,7 @@ export default function OrderConfirmModal({ copy, lang, order, onClose, onKeepSh
       <div
         onClick={onClose}
         aria-hidden="true"
-        className="absolute inset-0 bg-[#0d3a1d]/50 backdrop-blur-[2px]"
+        className="absolute inset-0 bg-[#2A0B4A]/60 backdrop-blur-[2px]"
       />
       <div
         role="dialog"
@@ -47,8 +47,8 @@ export default function OrderConfirmModal({ copy, lang, order, onClose, onKeepSh
         </button>
 
         <div className="px-5 pb-5 pt-7 text-center sm:px-7 sm:pb-7">
-          <span className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-[#ECFDF5]">
-            <CheckCircle2 className="h-7 w-7 text-action" strokeWidth={2.2} />
+          <span className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-teal-100">
+            <CheckCircle2 className="h-7 w-7 text-teal-600" strokeWidth={2.2} />
           </span>
 
           <h2 lang="bn" className="bn-tight mt-3.5 text-[19px] font-bold text-brand">
@@ -68,7 +68,7 @@ export default function OrderConfirmModal({ copy, lang, order, onClose, onKeepSh
           <dl className="mt-3 divide-y divide-line-soft rounded-xl border border-line text-left">
             {rows.map(({ icon: Icon, label, value }) => (
               <div key={label} className="flex items-start gap-2.5 px-4 py-2.5">
-                <Icon className="mt-0.5 h-4 w-4 shrink-0 text-action" strokeWidth={2.2} />
+                <Icon className="mt-0.5 h-4 w-4 shrink-0 text-violet-600" strokeWidth={2.2} />
                 <div className="min-w-0 flex-1">
                   <dt lang="bn" className="text-[11.5px] text-muted">
                     {label}
@@ -81,7 +81,7 @@ export default function OrderConfirmModal({ copy, lang, order, onClose, onKeepSh
             ))}
           </dl>
 
-          <div className="mt-3 flex items-center justify-between rounded-xl bg-brand px-4 py-3">
+          <div className="mt-3 flex items-center justify-between rounded-xl bg-gradient-to-r from-[#4C1D95] to-[#DB2777] px-4 py-3">
             <span lang="bn" className="text-[13px] font-semibold text-white">
               {copy.confirm.total}
             </span>
@@ -92,7 +92,7 @@ export default function OrderConfirmModal({ copy, lang, order, onClose, onKeepSh
             <button
               type="button"
               onClick={onKeepShopping}
-              className="min-h-[44px] flex-1 rounded-xl bg-action text-[13.5px] font-bold text-white transition-colors hover:bg-action-dark"
+              className="min-h-[44px] flex-1 rounded-xl bg-gradient-to-r from-[#F97316] to-[#FB923C] text-[13.5px] font-bold text-white transition-all hover:from-[#EA580C] hover:to-[#F97316]"
             >
               {copy.confirm.keepShopping}
             </button>

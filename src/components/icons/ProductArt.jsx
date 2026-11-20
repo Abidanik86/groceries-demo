@@ -4,9 +4,9 @@
  */
 
 const Palette = {
-  leaf: '#16A34A',
-  forest: '#14532D',
-  deep: '#0d3a1d',
+  leaf: '#3E8E5F',
+  forest: '#4C1D95',
+  deep: '#2F1B4D',
   turmeric: '#D97706',
   amber: '#F59E0B',
   cream: '#F7F5EE',
@@ -15,8 +15,8 @@ const Palette = {
   berry: '#9D3B4E',
   sky: '#4A7FB5',
   paper: '#FFFFFF',
-  ink: '#18221A',
-  mute: '#525E54',
+  ink: '#241733',
+  mute: '#6A5F7A',
 };
 
 const S = ({ children, ...rest }) => (
@@ -161,11 +161,11 @@ const SpiceArt = () => (
 const TeaArt = () => (
   <S>
     <path d="M32 24h56v76c0 4-3 7-7 7H39c-4 0-7-3-7-7V24Z" fill={Palette.forest} stroke={Palette.ink} strokeWidth="2.5" />
-    <path d="M32 24c6 4 50 4 56 0" stroke="#1f6b3c" strokeWidth="2.2" />
+    <path d="M32 24c6 4 50 4 56 0" stroke="#7C3AED" strokeWidth="2.2" />
     <rect x="40" y="38" width="40" height="42" rx="3" fill="#F4EFE2" stroke={Palette.ink} strokeWidth="2.2" />
     <path d="M56 48c12 4 18 14 14 26-10 4-22-2-26-12-2-6 4-12 12-14Z" fill={Palette.leaf} stroke={Palette.deep} strokeWidth="2.2" />
     <path d="M52 74c6-10 14-16 20-18" stroke={Palette.deep} strokeWidth="2" />
-    <path d="M44 88h32" stroke="#1f6b3c" strokeWidth="2.6" />
+    <path d="M44 88h32" stroke="#7C3AED" strokeWidth="2.6" />
   </S>
 );
 

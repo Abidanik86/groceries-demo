@@ -1,5 +1,12 @@
 import { BadgeCheck, PackageCheck, Truck, Undo2 } from 'lucide-react';
 
+const TINTS = [
+  'bg-gradient-to-br from-[#F97316] to-[#FB923C]',
+  'bg-gradient-to-br from-[#0D9488] to-[#14B8A6]',
+  'bg-gradient-to-br from-[#0284C7] to-[#38BDF8]',
+  'bg-gradient-to-br from-[#7C3AED] to-[#C026D3]',
+];
+
 export default function TrustStrip({ copy, lang }) {
   const items = [
     { icon: Truck, title: copy.trust.t1Title, sub: copy.trust.t1Sub },
@@ -9,31 +16,33 @@ export default function TrustStrip({ copy, lang }) {
   ];
 
   return (
-    <section className="border-t border-line bg-surface">
-      <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 sm:py-12">
-        <div className="text-center">
-          <h2 lang="bn" className="bn-tight text-[21px] font-bold text-brand sm:text-[25px]">
+    <section className="mt-6 border-t border-line bg-surface">
+      <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6">
+        <div className="flex flex-wrap items-baseline justify-between gap-2">
+          <h2 lang="bn" className="bn-tight text-[19px] font-bold text-brand sm:text-[22px]">
             {copy.trust.heading}
           </h2>
-          <p lang="bn" className="mt-1 text-[13px] leading-relaxed text-muted">
+          <p lang="bn" className="text-[12.5px] leading-relaxed text-muted">
             {copy.trust.subheading}
           </p>
         </div>
 
-        <div className="mt-7 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {items.map(({ icon: Icon, title, sub }) => (
+        <div className="mt-5 grid grid-cols-2 gap-3 lg:grid-cols-4">
+          {items.map(({ icon: Icon, title, sub }, i) => (
             <div
               key={title}
-              className="flex items-start gap-3.5 rounded-2xl border border-line-soft bg-canvas p-4"
+              className="flex items-start gap-3 rounded-2xl border border-line-soft bg-canvas p-3.5 transition-shadow hover:shadow-soft"
             >
-              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-brand">
-                <Icon className="h-5 w-5 text-[#9CD6A8]" strokeWidth={2.2} />
+              <span
+                className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-xl ${TINTS[i]}`}
+              >
+                <Icon className="h-4.5 w-4.5 text-white" strokeWidth={2.2} />
               </span>
               <div className="min-w-0">
-                <h3 lang="bn" className="bn-tight text-[13.5px] font-bold leading-snug text-ink">
+                <h3 lang="bn" className="bn-tight text-[12.5px] font-bold leading-snug text-ink">
                   {title}
                 </h3>
-                <p lang="bn" className="mt-1 text-[12px] leading-relaxed text-muted">
+                <p lang="bn" className="mt-0.5 text-[11.5px] leading-relaxed text-muted">
                   {sub}
                 </p>
               </div>

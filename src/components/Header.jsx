@@ -45,15 +45,15 @@ function AreaSelect({ area, onChange, copy }) {
         aria-expanded={open}
         className="flex w-full items-center gap-1.5 rounded-lg px-2 py-1.5 text-left transition-colors hover:bg-white/10 sm:w-auto"
       >
-        <MapPin className="h-3.5 w-3.5 shrink-0 text-[#9CD6A8]" strokeWidth={2.4} />
+        <MapPin className="h-3.5 w-3.5 shrink-0 text-[#FCD34D]" strokeWidth={2.4} />
         <span className="flex min-w-0 flex-col leading-tight">
-          <span className="text-[10px] uppercase tracking-wide text-[#B6D8C0]">
+          <span className="text-[10px] uppercase tracking-wide text-[#E9D5FF]">
             {copy.topbar.areaLabel}
           </span>
           <span className="truncate text-[13px] font-semibold text-white">{area}</span>
         </span>
         <ChevronDown
-          className={`h-3.5 w-3.5 shrink-0 text-[#B6D8C0] transition-transform ${open ? 'rotate-180' : ''}`}
+          className={`h-3.5 w-3.5 shrink-0 text-[#E9D5FF] transition-transform ${open ? 'rotate-180' : ''}`}
           strokeWidth={2.6}
         />
       </button>
@@ -113,7 +113,7 @@ function SearchBox({ copy, lang, qtyOf, onAdd, onIncrement, onDecrement, inputRe
     <div className="relative w-full" ref={wrapRef}>
       <div
         className={`flex items-center gap-2 rounded-xl border bg-canvas px-3 transition-all ${
-          focused ? 'border-action ring-2 ring-action/20' : 'border-line'
+          focused ? 'border-violet-500 ring-2 ring-violet-200' : 'border-line'
         }`}
       >
         <Search className="h-4 w-4 shrink-0 text-muted" strokeWidth={2.4} />
@@ -152,7 +152,7 @@ function SearchBox({ copy, lang, qtyOf, onAdd, onIncrement, onDecrement, inputRe
                     key={s.label}
                     type="button"
                     onClick={() => setQuery(s.query)}
-                    className="rounded-full border border-line bg-canvas px-3 py-1.5 text-[12.5px] font-medium text-ink transition-colors hover:border-action hover:bg-action hover:text-white"
+                    className="rounded-full border border-line bg-canvas px-3 py-1.5 text-[12.5px] font-medium text-ink transition-colors hover:border-violet-300 hover:bg-violet-600 hover:text-white"
                   >
                     {s.label}
                   </button>
@@ -201,13 +201,13 @@ function SearchBox({ copy, lang, qtyOf, onAdd, onIncrement, onDecrement, inputRe
                             <button
                               type="button"
                               onClick={() => onAdd(product.id, variant.id)}
-                              className="flex min-h-[34px] shrink-0 items-center gap-1 rounded-lg bg-action px-2.5 text-[12px] font-bold text-white transition-colors hover:bg-action-dark"
+                              className="flex min-h-[34px] shrink-0 items-center gap-1 rounded-lg bg-gradient-to-r from-[#F97316] to-[#FB923C] px-2.5 text-[12px] font-bold text-white transition-colors hover:from-[#EA580C] hover:to-[#F97316]"
                             >
                               <Plus className="h-3.5 w-3.5" strokeWidth={2.8} />
                               {copy.search.addToCart}
                             </button>
                           ) : (
-                            <div className="flex min-h-[34px] shrink-0 items-center gap-1 rounded-lg bg-brand px-1">
+                            <div className="flex min-h-[34px] shrink-0 items-center gap-1 rounded-lg bg-violet-700 px-1">
                               <button
                                 type="button"
                                 onClick={() => onDecrement(product.id, variant.id)}
@@ -260,24 +260,24 @@ export default function Header({
   return (
     <>
       {/* Top utility strip */}
-      <div className="bg-brand text-white">
+      <div className="bg-gradient-to-r from-[#3B0764] via-[#6D28D9] to-[#BE185D] text-white">
         <div className="mx-auto flex max-w-7xl flex-wrap items-center gap-x-4 gap-y-1 px-4 py-1.5 text-[12px] sm:px-6">
           <AreaSelect area={area} onChange={onAreaChange} copy={copy} />
 
-          <span className="hidden items-center gap-1.5 rounded-lg bg-white/10 px-2 py-1 text-[12px] text-[#DCEFE1] md:inline-flex">
-            <Truck className="h-3.5 w-3.5 text-[#9CD6A8]" strokeWidth={2.4} />
+          <span className="hidden items-center gap-1.5 rounded-lg bg-white/12 px-2 py-1 text-[12px] text-[#F5F3FF] md:inline-flex">
+            <Truck className="h-3.5 w-3.5 text-[#FCD34D]" strokeWidth={2.4} />
             <span className="num">⚡ {copy.topbar.etaPrefix}</span>
             <span className="font-semibold text-white">— {area}</span>
           </span>
 
           <div className="ml-auto flex flex-wrap items-center gap-x-4 gap-y-1">
-            <span className="inline-flex items-center gap-1.5 text-[#DCEFE1]">
-              <Phone className="h-3.5 w-3.5 text-[#9CD6A8]" strokeWidth={2.4} />
+            <span className="inline-flex items-center gap-1.5 text-[#F5F3FF]">
+              <Phone className="h-3.5 w-3.5 text-[#FCD34D]" strokeWidth={2.4} />
               <span className="hidden sm:inline">{copy.topbar.helpline}</span>
               <span className="num font-semibold text-white">09612-889900</span>
             </span>
-            <span className="inline-flex items-center gap-1.5 text-[#DCEFE1]">
-              <Truck className="h-3.5 w-3.5 text-[#9CD6A8]" strokeWidth={2.4} />
+            <span className="inline-flex items-center gap-1.5 text-[#F5F3FF]">
+              <Truck className="h-3.5 w-3.5 text-[#FCD34D]" strokeWidth={2.4} />
               <span className="num">{copy.topbar.freeDelivery}</span>
             </span>
           </div>
@@ -315,26 +315,26 @@ export default function Header({
             type="button"
             onClick={() => onLangChange(lang === 'bn' ? 'en' : 'bn')}
             aria-label="Language toggle"
-            className="flex shrink-0 items-center gap-1 rounded-lg border border-line bg-canvas px-2 py-1.5 text-[12px] font-semibold text-ink transition-colors hover:border-action hover:text-action sm:px-2.5"
+            className="flex shrink-0 items-center gap-1 rounded-lg border border-line bg-canvas px-2 py-1.5 text-[12px] font-semibold text-ink transition-colors hover:border-violet-300 hover:bg-violet-50 hover:text-violet-700 sm:px-2.5"
           >
-            <span lang="bn" className={lang === 'bn' ? 'text-action' : 'text-muted'}>
+            <span lang="bn" className={lang === 'bn' ? 'text-violet-700' : 'text-muted'}>
               বাংলা
             </span>
             <span className="text-muted">|</span>
-            <span className={lang === 'en' ? 'text-action' : 'text-muted'}>EN</span>
+            <span className={lang === 'en' ? 'text-violet-700' : 'text-muted'}>EN</span>
           </button>
 
           <button
             type="button"
             onClick={onOpenCart}
             aria-label={copy.header.cartAria}
-            className="relative flex shrink-0 items-center gap-2 rounded-xl bg-brand px-2.5 py-2 text-white transition-colors hover:bg-brand-deep sm:px-3.5"
+            className="relative flex shrink-0 items-center gap-2 rounded-xl bg-gradient-to-r from-[#F97316] to-[#FB923C] px-2.5 py-2 text-white shadow-sm transition-all hover:from-[#EA580C] hover:to-[#F97316] sm:px-3.5"
           >
             <ShoppingCart className="h-4.5 w-4.5" strokeWidth={2.4} />
             <span className="hidden text-[13px] font-semibold sm:inline">{copy.header.cart}</span>
             {totals.itemCount > 0 && (
               <>
-                <span className="num rounded-full bg-action px-1.5 py-0.5 text-[11px] font-bold leading-none text-white">
+                <span className="num rounded-full bg-violet-700 px-1.5 py-0.5 text-[11px] font-bold leading-none text-white">
                   {totals.itemCount}
                 </span>
                 <span className="num hidden text-[12.5px] font-semibold lg:inline">
